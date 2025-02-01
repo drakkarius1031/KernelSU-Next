@@ -26,10 +26,7 @@ jobs:
             kernel_image_name: bzImage
             build_config: build.config.gki.x86_64
             defconfig: x86_64_arcvm_defconfig
-          - arch: arm64
-            kernel_image_name: Image
-            build_config: build.config.gki.aarch64
-            defconfig: arm64_arcvm_defconfig
+
 
     name: Build ChromeOS ARCVM kernel
     runs-on: ubuntu-20.04
@@ -45,7 +42,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends bc \
               bison build-essential ca-certificates flex git gnupg \
               libelf-dev libssl-dev lsb-release software-properties-common wget \
-              libncurses-dev binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu nuget gzip \
+              libncurses-dev nuget gzip \
               rsync python3 device-tree-compiler
 
           sudo ln -s --force python3 /usr/bin/python
